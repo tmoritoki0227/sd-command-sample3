@@ -167,9 +167,9 @@ def main():
     # for collection in collections:
     print('------------ start ------------------')
     args = sys.argv
-    print(args[1])
-    #collection = args[1]
-    #print('collection = ' + print(str(collection)))
+    print(args[1]) 
+    collection = args[1]
+    print('collection = ' + print(str(collection)))
     #if not collection : raise VersionNotFoundError('arg nai yo')
 
     # print ("------------------------loopスタート-------------------------")
@@ -195,7 +195,7 @@ def main():
     # exec_ansible_galaxy_install(name, install_version) # 失敗したら例外発生
 
     # ここまでループ
-    return str(name) + "-" + str(version) + ".tar.gz" 
+    return str(name) + "-" + str(install_version) + ".tar.gz" 
 
 if __name__ == "__main__":
     main()
