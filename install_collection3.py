@@ -165,9 +165,13 @@ def main():
 
     # for でcollectionを１つずつ処理していく
     # for collection in collections:
+    print('------------ start ------------------')
     args = sys.argv
     print(args[1])
     collection = args[1]
+    print('collection = ' + print(collection))
+    if not collection : raise VersionNotFoundError('arg nai yo')
+
     # print ("------------------------loopスタート-------------------------")
     collection_parts = collection.strip().split('/') # 空白除去して/で分割　/aaa/release/1.0.0 => ["", "aaa" ,"release" ,"1.0.0"]
     print ("collection_parts = " + str(collection_parts))
