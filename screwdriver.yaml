@@ -1,0 +1,16 @@
+shared:
+    image: node:8
+    # image: rockylinux:8.7 # これもgitを求められ無理だった
+jobs:
+    main:
+        requires: [~pr, ~commit]
+        steps:
+            - validate: sd-cmd validate -f sd-command.yaml
+    publish:
+        requires: [main]
+        steps:
+            - publish: sd-cmd publish -f sd-command.yaml -t latest
+    promote:
+        requires: [publish]
+        steps:
+            - promote: sd-cmd promote foo/bar3 1.0.0 stable

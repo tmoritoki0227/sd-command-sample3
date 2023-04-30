@@ -1,0 +1,19 @@
+namespace: foo # コマンドのネームスペース
+name: bar3 # コマンドの名前
+version: '1.0' # メジャーバージョンとマイナーバージョン (パッチバージョンは自動付与)
+description: |
+  Lorem ipsum dolor sit amet.
+usage: |
+  sd-cmd exec foo/bar@<VERSION> <OPTION> <TARGET>
+  Options:
+          --config              コンフィグファイル
+          --debug               デバッグモード (デフォルト "false")
+          --host                スーパーホスト
+          --log-level           ログレベル ("debug"|"info"|"warn"|"error"|"fatal") (デフォルト "info")
+  Target:                       ファイルパス
+maintainer: foo@bar.com # コマンドの管理者
+format: binary # コマンドのフォーマット (binary または habitat)
+binary:
+    # file: ./foobar.sh # スクリプトやバイナリファイルの sd-command.yaml ファイルからの相対パス、もしくは絶対パス
+    # file: python3 install_collection.py # スクリプトやバイナリファイルの sd-command.yaml ファイルからの相対パス、もしくは絶対パス
+    file: ./install_collection3.py
