@@ -193,7 +193,7 @@ def main():
     
     # ansible_galaxy_installを実行する
     # exec_ansible_galaxy_install(name, install_version) # 失敗したら例外発生
-
+    print ("python = " + str(name) + "-" + str(install_version) + ".tar.gz" )
     # ここまでループ
     return str(name) + "-" + str(install_version) + ".tar.gz" 
 
