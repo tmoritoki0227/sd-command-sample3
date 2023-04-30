@@ -168,12 +168,13 @@ def main():
     print('------------ start ------------------')
     args = sys.argv
     print(args[1])
-    collection = args[1]
-    print('collection = ' + print(str(collection)))
-    if not collection : raise VersionNotFoundError('arg nai yo')
+    #collection = args[1]
+    #print('collection = ' + print(str(collection)))
+    #if not collection : raise VersionNotFoundError('arg nai yo')
 
     # print ("------------------------loopスタート-------------------------")
-    collection_parts = collection.strip().split('/') # 空白除去して/で分割　/aaa/release/1.0.0 => ["", "aaa" ,"release" ,"1.0.0"]
+    collection_parts = args[1].strip().split('/') # 空白除去して/で分割　/aaa/release/1.0.0 => ["", "aaa" ,"release" ,"1.0.0"]
+    # collection_parts = collection.strip().split('/') # 空白除去して/で分割　/aaa/release/1.0.0 => ["", "aaa" ,"release" ,"1.0.0"]
     print ("collection_parts = " + str(collection_parts))
 
     # ユーザ指定のname取得
