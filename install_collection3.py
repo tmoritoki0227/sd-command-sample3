@@ -169,7 +169,7 @@ def main():
     args = sys.argv
     print(args[1])
     collection = args[1]
-    print('collection = ' + print(collection))
+    print('collection = ' + print(str(collection)))
     if not collection : raise VersionNotFoundError('arg nai yo')
 
     # print ("------------------------loopスタート-------------------------")
